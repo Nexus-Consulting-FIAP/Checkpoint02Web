@@ -19,7 +19,7 @@ quiz_score = {
     ram_dodge: 0,
     ferrari_812: 0
 }
-
+//ADD FOTO NO FINAL E BOTÃO HOME BONITO
 class QA{
     index
     question
@@ -128,6 +128,10 @@ function score(option){
 
 index = 0
 function changeQA(){
+    if (index == 10){
+        endQuiz()
+        return
+    }
     document.getElementById("question").innerHTML = `${qa_array[index].index}. ${qa_array[index].question}`
 
     document.getElementById(1).innerHTML = qa_array[index].ans1
@@ -136,11 +140,6 @@ function changeQA(){
     document.getElementById(4).innerHTML = qa_array[index].ans4
 
     index++
-    if (index == 10){
-        index = 0
-        //TERMINAR QUIZ
-    }
-    console.log(quiz_score)
 }
 changeQA()
 
@@ -160,3 +159,16 @@ function give1point(value){
             break
     }
 }
+
+function endQuiz() {
+    document.getElementById("quiz").remove()
+    rotateElement("end")
+    document.getElementById("end").classList.remove("hidden")
+    calculateResults()
+}
+
+function calculateResults(){
+    
+}
+//DEBUG -> TIRAR DEPOIS!
+endQuiz()

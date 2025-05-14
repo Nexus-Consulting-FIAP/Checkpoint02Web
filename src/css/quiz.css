@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+}
+
+.carname-font {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-size: larger !important;
+}
+
+.gray-radius-font {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: gray;
+}
+
 .hidden {
     visibility: hidden;
 }
@@ -24,7 +39,7 @@
     border: 1.2px solid #000000;
     border-radius: 20px;
 
-    margin: 14vh 14vw;
+    margin: 13vh 13vw;
     padding: 2rem;
 
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -40,8 +55,19 @@
 .grid2x2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 1rem;
 }
+
+.grid4x1 {
+    display: flex;
+    gap: 6.5vw;
+}
+
+.grid4x1 img{
+    height: 5vh;
+    width: 7vw;
+}
+
 
 .rotate {
     animation-name: rotate-bottom;
