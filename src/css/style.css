@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+#container {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.slider {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 100vw;
+    position: relative;
+}
+.slide img {
+    width: 100%;
+}
