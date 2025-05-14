@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="teste" class="container rotate">
+    <div id="start" class="container rotate">
         <div class="content-align margin-around-medium">
             <p>
                 Bem-vindo ao quiz! <br>
@@ -23,22 +23,23 @@
             <button class="black-btn" onclick="quizstart()">Vamos lá!</button>
         </div>
     </div>
-    <div class="container rotate hidden">
-        <div id="question">
-            <p>Pergunta</p>
+    <div id="quiz" class="container rotate hidden">
+        <div id="questions">
+            <p id="question">Pergunta</p>
+            <img src="">
         </div>
-        <div id="answers">
-            <div id="1">
-
+        <div id="answers" class="grid2x2">
+            <div>
+                <button id="1" class="black-btn" onclick="score(1)">Vamos lá!</button>
             </div>
-            <div id="2">
-
+            <div>
+                <button id="2" class="black-btn" onclick="score(2)">Vamos lá!</button>
             </div>
-            <div id="3">
-
+            <div>
+                <button id="3" class="black-btn" onclick="score(3)">Vamos lá!</button>
             </div>
-            <div id="4">
-
+            <div>
+                <button id="4" class="black-btn" onclick="score(4)">Vamos lá!</button>
             </div>
         </div>
     </div>
