@@ -30,25 +30,24 @@ nav ul {
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
-    gap: 1rem;
+    gap: 2rem;
+    padding: 1rem;
     align-items: center;
     height: 100%;
 }
-nav ul li{
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 0.5rem;
-    position:sticky;
-}
 nav ul li a{
-    color: rgb(33, 36, 36);
+    color: #dfdfdf;
+    border: 2px solid #dfdfdf;
+    border-radius: 0.8rem;
+    font-size: 1re ;
+    padding: .5em;
 }
 nav ul li:hover{
-    font-size: 2rem;
-    background-color: red;
+    scale: 120%;
     
 }
 nav ul li a:hover{
-    color: rgb(255, 255, 255);
+    color: #dfdfdf;
 }
 
 /*========== CAROUSEL =========*/
