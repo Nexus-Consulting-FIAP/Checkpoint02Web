@@ -1,4 +1,4 @@
-*{
+* {
     font-family: "Gill Sans", sans-serif;
     margin: 0;
     padding: 0;
@@ -6,17 +6,22 @@
     text-decoration: none;
     transition: 0.2s;
 }
-:root{
+
+:root {
     --carousel-gradient: linear-gradient(to bottom, #00012e, #1a2f44, #00012e);
     --background-color: #121212;
+    --footer-color: #08001F;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 #container {
     width: 100%;
     min-height: 100vh;
 }
+
 section {
     background-color: var(--background-color);
     width: 100%;
@@ -28,12 +33,13 @@ button {
 }
 
 /*========== NAV =========*/
-nav{
+nav {
     z-index: 2;
     position: fixed;
     width: 100%;
     height: 5rem;
 }
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -43,18 +49,21 @@ nav ul {
     align-items: center;
     height: 100%;
 }
-nav ul li a{
+
+nav ul li a {
     color: #dfdfdf;
     border: 2px solid #dfdfdf;
     border-radius: 0.8rem;
-    font-size: 1re ;
+    font-size: 1re;
     padding: .5em;
 }
-nav ul li:hover{
+
+nav ul li:hover {
     scale: 120%;
-    
+
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     color: #dfdfdf;
 }
 
@@ -64,7 +73,7 @@ nav ul li a:hover{
     background: var(--carousel-gradient);
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 92vh;
 }
 
 .slide {
@@ -73,6 +82,7 @@ nav ul li a:hover{
     inset: 0;
     opacity: 0;
 }
+
 .slide img {
     display: block;
     position: absolute;
@@ -82,6 +92,7 @@ nav ul li a:hover{
     object-position: center;
     filter: brightness(25%);
 }
+
 .slide p {
     max-width: 60vw;
     position: absolute;
@@ -90,7 +101,8 @@ nav ul li a:hover{
     margin-left: 4rem;
     bottom: 10rem;
 }
-.slide[data-active]{
+
+.slide[data-active] {
     z-index: 1;
     transition-delay: 0s;
     opacity: 1;
@@ -107,12 +119,58 @@ nav ul li a:hover{
     font-size: 6rem;
     border: none;
 }
+
 .carousel-button:hover {
     color: rgba(190, 171, 171, 0.9);
 }
+
 .carousel-button.prev {
     left: 3rem;
 }
+
 .carousel-button.next {
     right: 3rem;
+}
+
+/* ==============about us==============*/
+
+.larger-h1 {
+    font-size: 6rem;
+}
+.larger-p {
+    font-size: 2rem;
+}
+
+.img-about-us{
+    margin-top: 2rem;
+    border-radius: 20px;
+    height: 80vh;
+}
+
+.about {
+    height: 92vh;
+    width: 100%;
+
+    display: flex;
+    gap: 16px;
+
+    text-align:center;
+    align-items: center;
+}
+
+.flex-options {
+    flex-grow: 1;
+    color: white;
+}
+
+/* footer */
+
+.footer-content-end {
+    color: white;
+    background-color: var(--footer-color);
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 16rem;
 }
