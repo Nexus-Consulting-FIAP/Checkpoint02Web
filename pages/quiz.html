@@ -11,16 +11,16 @@
 </head>
 
 <body>
-    <div class="small-button-size margin-around-small">
+    <div class="small-button-size">
         <a href="../index.html">
             <button class="black-btn">Voltar</button>
         </a>
     </div>
     <section class="main">
-        <div id="start" class="container rotate">
+        <div id="start" class="container bg-default rotate">
             <div class="content-align margin-around-medium">
-                <p>
-                    Bem-vindo ao quiz! <br>
+                <p class="bg-default">
+                    Bem-vindo ao quiz! Vamos ajudar a escolher o seu novo carro.<br>
                     Para responder tudo leva em torno de 3 minutos. <br>
                     Ao final, você encontrará a sua "alma gêmea" automotiva.
                 </p>
@@ -29,79 +29,79 @@
                 <button class="black-btn" onclick="quizstart()">Vamos lá!</button>
             </div>
         </div>
-        <div id="quiz" class="container rotate hidden">
+        <div id="quiz" class="container rotate bg-default hidden">
             <div id="questions">
-                <p id="question">Pergunta</p>
+                <p id="question" class="bg-default">Pergunta</p>
             </div>
-            <div id="answers" class="grid2x2">
+            <div id="answers" class="bg-default grid2x2">
                 <div>
-                    <button id="1" class="black-btn" onclick="score(1)">Vamos lá!</button>
+                    <button id="1" class="black-btn" onclick="score(1)">1</button>
                 </div>
                 <div>
-                    <button id="2" class="black-btn" onclick="score(2)">Vamos lá!</button>
+                    <button id="2" class="black-btn" onclick="score(2)">2</button>
                 </div>
                 <div>
-                    <button id="3" class="black-btn" onclick="score(3)">Vamos lá!</button>
+                    <button id="3" class="black-btn" onclick="score(3)">3</button>
                 </div>
                 <div>
-                    <button id="4" class="black-btn" onclick="score(4)">Vamos lá!</button>
+                    <button id="4" class="black-btn" onclick="score(4)">4</button>
                 </div>
             </div>
         </div>
-        <div id="end" class="container hidden">
+        <div id="end" class="container hidden bg-default">
             <div>
-                <p>
+                <p class="bg-default">
                     Veja os resultados que <br>
                     avaliamos sobre o seu perfil!
                 </p>
                 <br>
-                <p class="content-align">Você deveria olhar...</p>
-                <div class="grid4x1 content-align margin-around-medium">
+                <p class="content-align bg-default">Você deveria olhar...</p>
+                <div class="grid4x1 content-align margin-around-medium bg-default">
                     <div>
-                        <a class="no-outline" href="#link-carro">
-                            <p id="txtcar1" class="carname-font hidden">Renegade</p>
-                            <img id="photocar1" src="../src/assets/jeep-renegade.png">
+                        <a class="no-outline bg-default" href="#link-carro">
+                            <p id="txtcar1" class="carname-font bg-default hidden">bZ3x</p>
+                            <img id="photocar1" class="bg-default" src="../src/assets/toyota-bz3x.png">
                         </a>
                     </div>
                     <div>
-                        <a class="no-outline" href="#link-carro">
-                            <p id="txtcar2" class="carname-font hidden">Corolla</p>
-                            <img id="photocar2" src="../src/assets/toyota-corolla.png">
+                        <a class="no-outline bg-default" href="#link-carro">
+                            <p id="txtcar2" class="carname-font bg-default hidden">Dolphin</p>
+                            <img id="photocar2" class="bg-default" src="../src/assets/byd-dolphin.png">
                         </a>
                     </div>
                     <div>
-                        <a class="no-outline" href="#link-carro">
-                            <p id="txtcar3" class="carname-font hidden">Dodge</p>
-                            <img id="photocar3" src="../src/assets/ram-dodge.png">
+                        <a class="no-outline bg-default" href="#link-carro">
+                            <p id="txtcar3" class="carname-font bg-default hidden">Silverado</p>
+                            <img id="photocar3" class="bg-default" src="../src/assets/chevrolet-silverado.png">
                         </a>
                     </div>
                     <div>
-                        <a class="no-outline" href="#link-carro ">
-                            <p id="txtcar4" class="carname-font hidden">812</p>
-                            <img id="photocar4" src="../src/assets/ferrari-812.png">
+                        <a class="no-outline bg-default" href="#link-carro ">
+                            <p id="txtcar4" class="carname-font bg-default hidden">Roadster</p>
+                            <img id="photocar4" class="bg-default" src="../src/assets/tesla-roadster.png">
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="gray-radius-font content-align">
+            <div class="white-radius-font content-align bg-default">
                 <div class="margin-around-medium">
                     <span>- Seus dados de afinidade -</span>
                 </div>
-                <div class="grid4x1">
+                <div class="grid4x1 bg-default">
                     <div>
-                        <p>Jeep&#8482; <br> Renegade</p>
+                        <p>Toyota&#8482; <br> bZ3x</p>
                         <p id="rslt1">0%</p>
                     </div>
                     <div>
-                        <p>Toyota&#8482; <br> Corolla</p>
+                        <p>BYD&#8482; <br> Dolphin</p>
                         <p id="rslt2">0%</p>
                     </div>
                     <div>
-                        <p>Ram&#8482; <br> Dodge</p>
+                        <p>Chevrolet&#8482; <br> Silverado</p>
                         <p id="rslt3">0%</p>
                     </div>
                     <div>
-                        <p>Ferrari&#8482; <br> 812</p>
+                        <p>Tesla&#8482; <br> Roadster</p>
                         <p id="rslt4">0%</p>
                     </div>
                 </div>

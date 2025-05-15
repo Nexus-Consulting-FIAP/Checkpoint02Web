@@ -12,10 +12,10 @@ function rotateElement(id) {
 }
 
 quiz_score = {
-    jeep_renegade: 0,
-    toyota_corolla: 0,
-    ram_dodge: 0,
-    ferrari_812: 0
+    toyota_bz3x: 0,
+    byd_dolphin: 0,
+    chevrolet_silverado: 0,
+    tesla_roadster: 0
 }
 
 class QA{
@@ -36,86 +36,16 @@ class QA{
 }
 
 qa_array = [
-    new QA(
-        1, 
-        'Como você costuma usar o carro no dia a dia?',
-        'Para trilhas e aventuras fora de estrada.',
-        'Para ir ao trabalho ou faculdade com economia.',
-        'Para carregar equipamentos ou viajar em estradas de terra.',
-        'Para passeios de luxo e status social.'
-    ),
-    new QA(
-        2, 
-        'Qual característica você mais valoriza em um carro?',
-        'Capacidade off-road e robustez',
-        'Confiabilidade e custo-benefício',
-        'Potência e força de carga',
-        'Desempenho e design esportivo'
-    ),
-    new QA(
-        3, 
-        'Onde você mais dirige?',
-        'Trilhas, montanhas e terrenos irregulares',
-        'Cidade e estrada com conforto',
-        'Interior e fazendas com muita carga',
-        'Rodovias e pistas em alta velocidade'
-    ),
-    new QA(
-        4, 
-        'Qual seu estilo de vida?',
-        'Aventureiro e espontâneo',
-        'Prático e equilibrado',
-        'Trabalhador e robusto',
-        'Ambicioso e sofisticado'
-    ),
-    new QA(
-        5, 
-        'Qual desses destinos você prefere para uma viagem?',
-        'Serra da Canastra ou Chapada dos Veadeiros',
-        'Campos do Jordão ou Foz do Iguaçu',
-        'Pantanal ou interior do Mato Grosso',
-        'Riviera Francesa ou Las Vegas'
-    ),
-    new QA(
-        6, 
-        'Se você ganhasse R$ 200 mil agora, o que faria com o dinheiro?',
-        'Investiria em experiências de aventura',
-        'Compraria um carro equilibrado e guardaria o resto',
-        'Melhoraria minha estrutura de trabalho e transporte',
-        'Compraria um carro esportivo de luxo'
-    ),
-    new QA(
-        7, 
-        'Como você define sua relação com carros?',
-        'Companheiro de aventura',
-        'Meio de transporte confiável',
-        'Ferramenta de trabalho e versatilidade',
-        'Símbolo de sucesso e performance'
-    ),
-    new QA(
-        8, 
-        'Qual adjetivo te representa melhor?',
-        'Corajoso',
-        'Racional',
-        'Forte',
-        'Ambicioso'
-    ),
-    new QA(
-        9, 
-        'Qual desses hobbies você prefere?',
-        'Acampar ou explorar a natureza',
-        'Viajar com conforto e segurança',
-        'Trabalhar com animais ou equipamentos',
-        'Correr, curtir velocidade e luxo'
-    ),
-    new QA(
-        10, 
-        'Em qual dessas frases você mais acredita?',
-        'A vida é uma aventura a ser vivida.',
-        'Menos é mais: praticidade é tudo.',
-        'Força e resistência levam mais longe.',
-        'Você é o que você dirige.'
-    )
+    new QA(1, "Qual o seu estilo de viagem preferido?", "Trilhas e natureza", "Percursos urbanos curtos", "Viagens com carga ou equipamentos", "Viagens confortáveis e sofisticadas"),
+    new QA(2, "Qual a principal utilidade que você espera do carro?", "Versatilidade e resistência", "Economia e mobilidade no dia a dia", "Capacidade de carga e força", "Conforto e status"),
+    new QA(3, "Com que frequência você viaja para lugares fora do asfalto?", "Frequentemente", "Quase nunca", "Às vezes, levando equipamentos", "Raramente, prefiro rodovias bem pavimentadas"),
+    new QA(4, "Qual o tipo de design que mais te agrada?", "Robusto e imponente", "Simplicidade funcional", "Estilo forte e utilitário", "Moderno e elegante"),
+    new QA(5, "Quantas pessoas geralmente viajam com você?", "Família com bastante bagagem", "Sozinho ou com mais uma pessoa", "Grupo com equipamentos de trabalho", "Família em conforto total"),
+    new QA(6, "Onde você costuma estacionar seu carro?", "Garagens amplas ou ao ar livre", "Ruas ou garagens pequenas", "Estacionamentos de obras ou sítios", "Estacionamentos privados e seguros"),
+    new QA(7, "Qual a sua prioridade ao dirigir?", "Desempenho em terrenos diversos", "Facilidade de manobrar", "Força e espaço para trabalho", "Silêncio e conforto"),
+    new QA(8, "Você se preocupa com a autonomia do veículo?", "Sim, principalmente em trilhas", "Sim, para deslocamentos urbanos", "Sim, quando levo carga pesada", "Sim, para longas viagens com conforto"),
+    new QA(9, "Com que frequência você transporta carga ou objetos grandes?", "Ocasionalmente em viagens", "Raramente", "Frequentemente", "Somente em viagens especiais"),
+    new QA(10, "Qual imagem você gostaria que seu carro transmitisse?", "Aventureiro e pronto pra tudo", "Prático e acessível", "Forte e trabalhador", "Elegante e sofisticado")
 ]
 
 function score(option){
@@ -144,16 +74,16 @@ changeQA()
 function give1point(value){
         switch (value){
         case 1:
-            quiz_score["jeep_renegade"]++
+            quiz_score["toyota_bz3x"]++
             break
         case 2:
-            quiz_score["toyota_corolla"]++
+            quiz_score["byd_dolphin"]++
             break
         case 3:
-            quiz_score["ram_dodge"]++
+            quiz_score["chevrolet_silverado"]++
             break
         case 4:
-            quiz_score["ferrari_812"]++
+            quiz_score["tesla_roadster"]++
             break
     }
 }
@@ -166,29 +96,29 @@ function endQuiz() {
 }
 
 function calculateResults(){
-    jr_result = quiz_score["jeep_renegade"]/10*100
-    tc_result = quiz_score["toyota_corolla"]/10*100
-    rd_result = quiz_score["ram_dodge"]/10*100
-    f8_result = quiz_score["ferrari_812"]/10*100
+    tb_result = quiz_score["toyota_bz3x"]/10*100
+    bd_result = quiz_score["byd_dolphin"]/10*100
+    cs_result = quiz_score["chevrolet_silverado"]/10*100
+    tr_result = quiz_score["tesla_roadster"]/10*100
     count = 0
 
     addvalues = setInterval(()=>{
         if (count == 100) clearInterval(addvalues)
-        if (count <= jr_result) {
+        if (count <= tb_result) {
             document.getElementById("rslt1").innerHTML = `${count}%`
         }
-        if (count <= tc_result) {
+        if (count <= bd_result) {
             document.getElementById("rslt2").innerHTML = `${count}%`
         }
-        if (count <= rd_result) {
+        if (count <= cs_result) {
             document.getElementById("rslt3").innerHTML = `${count}%`
         }
-        if (count <= f8_result) {          
+        if (count <= tr_result) {          
             document.getElementById("rslt4").innerHTML = `${count}%`
         }
         count++
     },50)
-    featureCars(jr_result, tc_result, rd_result, f8_result)    
+    featureCars(tb_result, bd_result, cs_result, tr_result)    
 }
 
 function featureCars(a, b, c, d){
