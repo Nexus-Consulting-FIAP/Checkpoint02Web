@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../src/css/quiz.css">
+    <link rel="stylesheet" href="../src/css/black-button.css">
+    <script src="../src/js/quiz.js" defer></script>
+</head>
+
+<body>
+    <div class="small-button-size margin-around-small">
+        <a href="../index.html">
+            <button class="black-btn">Voltar</button>
+        </a>
+    </div>
+    <section class="main">
+        <div id="start" class="container rotate">
+            <div class="content-align margin-around-medium">
+                <p>
+                    Bem-vindo ao quiz! <br>
+                    Para responder tudo leva em torno de 3 minutos. <br>
+                    Ao final, você encontrará a sua "alma gêmea" automotiva.
+                </p>
+            </div>
+            <div class="content-align">
+                <button class="black-btn" onclick="quizstart()">Vamos lá!</button>
+            </div>
+        </div>
+        <div id="quiz" class="container rotate hidden">
+            <div id="questions">
+                <p id="question">Pergunta</p>
+            </div>
+            <div id="answers" class="grid2x2">
+                <div>
+                    <button id="1" class="black-btn" onclick="score(1)">Vamos lá!</button>
+                </div>
+                <div>
+                    <button id="2" class="black-btn" onclick="score(2)">Vamos lá!</button>
+                </div>
+                <div>
+                    <button id="3" class="black-btn" onclick="score(3)">Vamos lá!</button>
+                </div>
+                <div>
+                    <button id="4" class="black-btn" onclick="score(4)">Vamos lá!</button>
+                </div>
+            </div>
+        </div>
+        <div id="end" class="container hidden">
+            <div>
+                <p>
+                    Veja os resultados que <br>
+                    avaliamos sobre o seu perfil!
+                </p>
+                <br>
+                <p class="content-align">Você deveria olhar...</p>
+                <div class="grid4x1 content-align margin-around-medium">
+                    <div>
+                        <a class="no-outline" href="#link-carro">
+                            <p id="txtcar1" class="carname-font hidden">Renegade</p>
+                            <img id="photocar1" src="../src/assets/jeep-renegade.png">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="no-outline" href="#link-carro">
+                            <p id="txtcar2" class="carname-font hidden">Corolla</p>
+                            <img id="photocar2" src="../src/assets/toyota-corolla.png">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="no-outline" href="#link-carro">
+                            <p id="txtcar3" class="carname-font hidden">Dodge</p>
+                            <img id="photocar3" src="../src/assets/ram-dodge.png">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="no-outline" href="#link-carro ">
+                            <p id="txtcar4" class="carname-font hidden">812</p>
+                            <img id="photocar4" src="../src/assets/ferrari-812.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="gray-radius-font content-align">
+                <div class="margin-around-medium">
+                    <span>- Seus dados de afinidade -</span>
+                </div>
+                <div class="grid4x1">
+                    <div>
+                        <p>Jeep&#8482; <br> Renegade</p>
+                        <p id="rslt1">0%</p>
+                    </div>
+                    <div>
+                        <p>Toyota&#8482; <br> Corolla</p>
+                        <p id="rslt2">0%</p>
+                    </div>
+                    <div>
+                        <p>Ram&#8482; <br> Dodge</p>
+                        <p id="rslt3">0%</p>
+                    </div>
+                    <div>
+                        <p>Ferrari&#8482; <br> 812</p>
+                        <p id="rslt4">0%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
