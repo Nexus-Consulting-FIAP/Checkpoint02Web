@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth;
     transition: 0.2s;
 }
 #container {
@@ -21,33 +22,38 @@ button {
 
 /*========== NAV =========*/
 nav{
-    z-index: 2;
+    z-index: 3;
+    background-color: var(--darker-main-color);
     position: fixed;
     width: 100%;
-    height: 5rem;
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h1 {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-left: 5rem;
 }
 nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 2rem;
-    padding: 1rem;
-    align-items: center;
     height: 100%;
+    list-style-type: none;
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 1rem 5rem;
 }
 nav ul li a{
-    color: #dfdfdf;
-    border: 2px solid #dfdfdf;
+    color: var(--text-color);
+    font-size: 1.3rem;
+    padding: .5rem;
+    border: 0.1rem solid transparent;
     border-radius: 0.8rem;
-    font-size: 1re ;
-    padding: .5em;
-}
-nav ul li:hover{
-    scale: 120%;
-    
 }
 nav ul li a:hover{
-    color: #dfdfdf;
+    border: 0.1rem solid var(--text-color);
 }
 
 /*========== CAROUSEL =========*/
@@ -106,4 +112,12 @@ nav ul li a:hover{
 }
 .carousel-button.next {
     right: 3rem;
+}
+
+:root {
+    --main-color: #121212;
+    --darker-main-color: #0D0D0D;
+    --light-blue: #007BFF;
+    --dark-blue: #08001F;
+    --text-color: #FFFFFF;
 }
