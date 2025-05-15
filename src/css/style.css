@@ -6,6 +6,9 @@
     text-decoration: none;
     transition: 0.2s;
 }
+:root{
+    --carousel-gradient: linear-gradient(to top right, #3730a3, #e0e7ff, #1f2937);
+}
 #container {
     width: 100%;
     min-height: 100vh;
@@ -53,6 +56,7 @@ nav ul li a:hover{
 /*========== CAROUSEL =========*/
 
 .carousel {
+    background: var(--carousel-gradient);
     position: relative;
     width: 100%;
     height: 100vh;
