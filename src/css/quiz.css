@@ -9,6 +9,11 @@ p {
     font-size: xx-large;
 }
 
+.no-outline {
+    text-decoration: none;
+    color: black;
+}
+
 .carname-font {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     font-size: larger !important;
@@ -32,7 +37,22 @@ p {
     margin: 2rem;
 }
 
+.margin-around-small {
+    margin: 0.1rem;
+}
+
+.small-button-size {
+    height: 10px;
+    width: 7rem;
+}
+
+.main{
+    display: grid; /*Macete para deixar divs em cima de outras*/
+}
+
 .container {
+    grid-area: 1/1; /*Macete para deixar divs em cima de outras*/
+
     height: 72vh;
     width: 72vw;
 
@@ -64,24 +84,18 @@ p {
 }
 
 .grid4x1 img{
-    height: 5vh;
-    width: 7vw;
+    height: 6vh;
+    width: 5vw;
 }
 
+.feature-car{
+    height: 14vh !important;
+    width: 14vw !important;
+}
 
 .rotate {
-    animation-name: rotate-bottom;
-    animation-duration: 2s;
+    animation-name: rotate-hor-center;
+    animation-duration: 2.5s;
 }
 
-@keyframes rotate-bottom {
-    0% {
-        transform: rotate(0);
-        transform-origin: bottom;
-    }
-
-    100% {
-        transform: rotate(360deg);
-        transform-origin: bottom;
-    }
-}
+@keyframes rotate-hor-center {0% { transform: rotateX(0); } 100% { transform: rotateX(-360deg);} }

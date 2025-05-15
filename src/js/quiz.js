@@ -3,8 +3,6 @@ function quizstart(){
     document.getElementById("start").remove()
     document.getElementById("quiz").classList.remove("hidden")
 }
-//DEBUG -> TIRAR DEPOIS!
-quizstart()
 
 function rotateElement(id) {
     const element = document.getElementById(id)
@@ -19,7 +17,7 @@ quiz_score = {
     ram_dodge: 0,
     ferrari_812: 0
 }
-//ADD FOTO NO FINAL E BOTÃO HOME BONITO
+
 class QA{
     index
     question
@@ -122,7 +120,7 @@ qa_array = [
 
 function score(option){
     rotateElement("quiz")
-    changeQA()
+    setTimeout(() => changeQA(), 1000)
     give1point(option)
 }
 
@@ -168,7 +166,40 @@ function endQuiz() {
 }
 
 function calculateResults(){
-    
+    jr_result = quiz_score["jeep_renegade"]/10*100
+    tc_result = quiz_score["toyota_corolla"]/10*100
+    rd_result = quiz_score["ram_dodge"]/10*100
+    f8_result = quiz_score["ferrari_812"]/10*100
+    count = 0
+
+    addvalues = setInterval(()=>{
+        if (count == 100) clearInterval(addvalues)
+        if (count <= jr_result) {
+            document.getElementById("rslt1").innerHTML = `${count}%`
+        }
+        if (count <= tc_result) {
+            document.getElementById("rslt2").innerHTML = `${count}%`
+        }
+        if (count <= rd_result) {
+            document.getElementById("rslt3").innerHTML = `${count}%`
+        }
+        if (count <= f8_result) {          
+            document.getElementById("rslt4").innerHTML = `${count}%`
+        }
+        count++
+    },50)
+    featureCars(jr_result, tc_result, rd_result, f8_result)    
 }
-//DEBUG -> TIRAR DEPOIS!
-endQuiz()
+
+function featureCars(a, b, c, d){
+    const min = 30
+    makefeature = (txtid, photoid) => {
+        document.getElementById(txtid).classList.remove("hidden")
+        document.getElementById(photoid).classList.add("feature-car")
+    }
+
+    if (a >= min) makefeature("txtcar1", "photocar1")
+    if (b >= min) makefeature("txtcar2", "photocar2")
+    if (c >= min) makefeature("txtcar3", "photocar3")
+    if (d >= min) makefeature("txtcar4", "photocar4")
+}
