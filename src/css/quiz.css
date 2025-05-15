@@ -94,8 +94,8 @@ p {
 }
 
 .rotate {
-    animation-name: rotate-hor-center;
+    animation-name: heartbeat-normal;
     animation-duration: 2.5s;
 }
 
-@keyframes rotate-hor-center {0% { transform: rotateX(0); } 100% { transform: rotateX(-360deg);} }
+@keyframes heartbeat-normal {from { transform: scale(1); transform-origin: center center; animation-timing-function: ease-out; } 10% { transform: scale(0.91); animation-timing-function: ease-in; } 17% { transform: scale(0.98); animation-timing-function: ease-out; } 33% { transform: scale(0.87); animation-timing-function: ease-in; } 45% { transform: scale(1); animation-timing-function: ease-out;} }
