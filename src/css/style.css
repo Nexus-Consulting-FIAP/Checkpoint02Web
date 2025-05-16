@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    user-select: none;
     scroll-behavior: smooth;
     transition: 0.2s;
 }
@@ -38,7 +39,7 @@ nav{
     z-index: 3;
     background-color: var(--darker-main-color);
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 7rem;
     display: flex;
     justify-content: space-between;
@@ -135,6 +136,7 @@ nav ul li a:hover{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding-top: 3rem;
 }
 .card {
     background-color: var(--lighter-main-color);
@@ -186,3 +188,57 @@ nav ul li a:hover{
         width: 35rem;
     }
 }
+
+/*========== SOBRE =========*/
+#about {
+    padding: 4rem 18vw;
+    display: flex;
+    gap: 6rem;
+}
+.about-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-description h1 {
+    z-index: 1;
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+.about-description p {
+    z-index: 1;
+    font-size: 1.7rem;
+}
+
+@media (width <= 96rem) {
+    #about {
+        padding: 4rem 10vw;
+    }
+}
+@media (width <= 80rem) {
+    #about {
+        background-image: url("/src/assets/AboutImage.jpg");
+        background-size: cover;
+        backdrop-filter: brightness(20%);
+    }
+    #about::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    #about img {
+        display: none;
+    }
+}
+@media (width <= 40rem) {
+        #about::before {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .about-description h1 {
+            font-size: 3rem;
+        }
+        .about-description p {
+            font-size: 1.5rem;
+        }
+    }
