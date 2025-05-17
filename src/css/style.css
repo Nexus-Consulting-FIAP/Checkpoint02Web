@@ -181,10 +181,9 @@ nav ul li a:hover{
     height: 100%;
 }
 .card-description p {
-    font-size: 1.3rem;
-    display: -webkit-box;
+    font-size: 1rem;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;   /* nº de linhas que você quiser */
+    -webkit-line-clamp: 8;   /* nº de linhas que você quiser */
     overflow: hidden;
     text-overflow: ellipsis;
 }
