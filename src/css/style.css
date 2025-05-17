@@ -76,7 +76,7 @@ nav ul li a:hover{
     background: var(--carousel-gradient);
     position: relative;
     width: 100%;
-    height: 100gvh;
+    height: 100vh;
 }
 
 .slide {
