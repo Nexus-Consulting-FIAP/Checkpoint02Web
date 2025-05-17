@@ -61,7 +61,7 @@ function endQuiz() {
 }
 
 const backQuestion = async() => {
-    if (index <= 1) {
+    if (index > 1) {
         index --;
         questionBeforeWord = `${qa_array[index].index}. ${qa_array[index].question}`
         questionAfterWord = `${qa_array[index-1].index}. ${qa_array[index-1].question}`
