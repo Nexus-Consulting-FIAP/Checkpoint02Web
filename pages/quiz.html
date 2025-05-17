@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/src/css/style.css">
     <link rel="stylesheet" href="../src/css/quiz.css">
     <link rel="stylesheet" href="../src/css/black-button.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="../src/js/quiz.js" defer></script>
 </head>
 
@@ -17,9 +18,9 @@
             <nav>
                 <h1>E-Motors Nexus</h1>
                 <ul>
-                    <li><a href="#hero">home</a></li>
-                    <li><a href="#cars">carros</a></li>
-                    <li><a href="#about">sobre</a></li>
+                    <li><a href="/index.html#hero">home</a></li>
+                    <li><a href="/index.html#cars">carros</a></li>
+                    <li><a href="/index.html#about">sobre</a></li>
                     <li><a href="/pages/quiz.html">quiz</a></li>
                 </ul>
             </nav>
@@ -38,6 +39,7 @@
                 </div>
             </div>
             <div id="quiz" class="container rotate bg-default hidden">
+                <button class="back-btn" onclick="backQuestion()"><i class="fa-solid fa-arrow-left"></i></button>
                 <div id="questions">
                     <p id="question" class="bg-default">Pergunta</p>
                 </div>

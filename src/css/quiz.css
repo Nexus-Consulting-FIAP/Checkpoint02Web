@@ -46,6 +46,7 @@ p {
 
 .main{
     display: grid; /*Macete para deixar divs em cima de outras*/
+    justify-content: center;
 }
 
 .bg-default {
@@ -102,4 +103,45 @@ p {
 
 .lock {
     pointer-events: none;
+}
+
+#quiz {
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    background-color: transparent;
+    border: none;   
+    top: 3em;
+    left: 3rem;
+}
+.back-btn i {
+    font-size: 5rem;
+    color: #ffffff;
+}
+.back-btn i:hover {
+    color: #919191;
+}
+
+@media (width <= 96rem) {
+    .container{
+        width: 80vw;
+    }
+}
+@media (width <= 40rem) {
+    .container {
+        width: 90vw;
+        align-items: end;
+    }
+    .grid2x2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .back-btn {
+        top: 2rem;
+        left: auto;
+    }
+    .back-btn i{
+        font-size: 3.5rem;
+    }
 }

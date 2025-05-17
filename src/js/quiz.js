@@ -40,6 +40,7 @@ qa_array = [
     new QA(10, "Qual imagem você gostaria que seu carro transmitisse?", "Aventureiro e pronto pra tudo", "Prático e acessível", "Forte e trabalhador", "Elegante e sofisticado")
 ]
 
+let index = 0
 const questionEl = document.getElementById("question");
 const questionButtonEl = document.getElementsByClassName("question-btn");
 
@@ -57,6 +58,30 @@ function endQuiz() {
     document.getElementById("quiz").remove()
     document.getElementById("end").classList.remove("hidden")
     calculateResults()
+}
+
+const backQuestion = async() => {
+    if (index <= 1) {
+        index --;
+        questionBeforeWord = `${qa_array[index].index}. ${qa_array[index].question}`
+        questionAfterWord = `${qa_array[index-1].index}. ${qa_array[index-1].question}`
+        index --;
+    
+        Array.from(questionButtonEl).forEach(btn => {
+            btn.classList.add("lock")
+        });
+        
+        for(let i = questionBeforeWord.length; i > 0; i--) {
+            questionEl.innerHTML = questionBeforeWord.substring(0, i - 1)
+            await sleep(15)
+        }
+        await sleep(400)
+        for(let i = 0; i <= questionAfterWord.length; i++) {
+            questionEl.innerHTML = questionAfterWord.substring(0, i + 1)
+            await sleep(15)
+        }
+       changeQA()
+    }
 }
 
 const questionTransition = async () => {
@@ -84,8 +109,6 @@ const questionTransition = async () => {
     }
    changeQA()
 }
-
-index = 0
 function changeQA(){
     if(index == 0) {
         questionEl.innerHTML = `${qa_array[index].index}. ${qa_array[index].question}`
