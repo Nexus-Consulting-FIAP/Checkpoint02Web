@@ -145,3 +145,13 @@ p {
         font-size: 3.5rem;
     }
 }
+
+/*========== FOOTER =========*/
+footer {
+    position: fixed;
+    bottom: 0;
+}
+footer p {
+    width: 100%;
+    font-size: 1.2rem;
+}
